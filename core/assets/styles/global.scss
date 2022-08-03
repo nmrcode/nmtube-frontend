@@ -1,0 +1,20 @@
+@import "reset";
+
+:root {
+  --always-white-color: #fff;
+  --always-black-color: #000;
+  --bg-color: #f2f2f2;
+  --text-default-color: #19202c;
+  --text-light-gray-color: #c2c2c2;
+  --text-gray-color: #898989;
+  --text-dark-gray-color: rgba(0, 0, 0, 0.3);
+  --accent-color: #ff0000;
+  --accent-hover-color: #b30000;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-default-color);
+}
