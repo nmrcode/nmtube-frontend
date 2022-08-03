@@ -1,5 +1,6 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
+// eslint-disable-next-line mobx/missing-observer
 export default function Document() {
   return (
     <Html>

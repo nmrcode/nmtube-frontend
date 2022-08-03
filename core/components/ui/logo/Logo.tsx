@@ -1,7 +1,8 @@
 import * as React from "react";
 import Link from "next/link";
+import { observer } from "mobx-react-lite";
 
-function Logo(props: React.SVGProps<SVGSVGElement>) {
+const Logo = observer(function Logo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <Link href="/">
       <a>
@@ -27,6 +28,6 @@ function Logo(props: React.SVGProps<SVGSVGElement>) {
       </a>
     </Link>
   );
-}
+});
 
 export default Logo;
