@@ -1,0 +1,15 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(18.75rem, 51.875rem) auto;
+  column-gap: 2.8125rem;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-self: right;
+  > *:not(:last-child) {
+    margin-right: 3.125rem;
+  }
+}

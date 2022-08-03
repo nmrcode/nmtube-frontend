@@ -1,0 +1,49 @@
+.wrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.5rem;
+  width: 100%;
+  min-width: 9.375rem;
+}
+
+.menu {
+  position: absolute;
+  top: 120px;
+  right: -10px;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 0.625rem;
+  background: #fff;
+  min-width: 200px;
+  max-width: 500px;
+  overflow: hidden;
+
+  &.active {
+    top: 130%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.list {
+}
+
+.item {
+}
+
+.link {
+  display: block;
+  padding: 0.9375rem 1.25rem;
+  color: var(--text-default-color);
+  text-decoration: none;
+  &:hover {
+    background-color: var(--accent-hover-color);
+    color: var(--always-white-color);
+  }
+}

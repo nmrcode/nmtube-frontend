@@ -10,11 +10,17 @@
   --text-dark-gray-color: rgba(0, 0, 0, 0.3);
   --accent-color: #ff0000;
   --accent-hover-color: #b30000;
+  --border-color: #ebebeb;
+}
+
+* {
+  font-family: inherit;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-default-color);
+  font-weight: 400;
   font-size: 16px;
   font-family: "Mulish", sans-serif;
 }
