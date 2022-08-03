@@ -1,0 +1,46 @@
+$sidebar-width: 15.9375rem;
+$column-gap: 1.875rem;
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 3.4375rem 1fr;
+  grid-template-columns: $sidebar-width 1fr;
+  grid-template-areas:
+    "header header"
+    "main main";
+}
+
+.header {
+  grid-area: header;
+  padding-left: $sidebar-width + $column-gap;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  padding: 2.5rem 0;
+  width: $sidebar-width;
+  height: 100%;
+  min-height: 100%;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: rgba(255, 0, 0, 0.2);
+  }
+}
+
+.main {
+  grid-area: main;
+  padding-left: $sidebar-width + $column-gap;
+}
