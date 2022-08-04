@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 500px;
+  height: 100vh;
+}
+
+.title {
+  margin-bottom: 1.25rem;
+  font-size: 1.75rem;
+}
+
+.form {
+  display: grid;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem;
+}
+
+.back {
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    color: var(--accent-hover-color);
+  }
+}
