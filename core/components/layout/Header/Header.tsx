@@ -8,20 +8,21 @@ import ProfileDropdown from "@/components/ui/profile-dropdown/ProfileDropdown";
 import SearchIcon from "../../../assets/images/icons/search.svg";
 
 import s from "./Header.module.scss";
-const Header: FC = () => {
+import { observer } from "mobx-react-lite";
+const Header: FC = observer(() => {
   return (
     <div className={s.wrapper}>
       <div className={s.search}>
         <Field icon={<SearchIcon />} placeholder="Поиск фильмов ..." />
       </div>
       <div className={s.right}>
-        <Button size="xs" variant="outline">
+        <Button shape="rounded" size="xs">
           Добавить
         </Button>
         <ProfileDropdown links={dropdownLinks} />
       </div>
     </div>
   );
-};
+});
 
 export default Header;
