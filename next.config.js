@@ -3,10 +3,19 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    REACT_API_URL: process.env.REACT_API_URL,
+    BACKEND_URL: process.env.BACKEND_URL,
   },
-  images: {
-    domains: ["localhost:4444/api"],
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: "http://localhost:4444/api/:path*",
+      },
+      {
+        source: "/uploads/:path*",
+        destination: "http://localhost:4444/uploads/:path*",
+      },
+    ];
   },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(

@@ -5,8 +5,3 @@ export interface IAuthResponse {
   };
   accessToken: string;
 }
-
-export interface IAuthDto {
-  email: string;
-  password: string;
-}
