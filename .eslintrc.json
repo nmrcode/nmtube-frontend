@@ -1,0 +1,19 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:mobx/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["mobx"],
+  "rules": {
+    "mobx/exhaustive-make-observable": "warn",
+    "mobx/unconditional-make-observable": "error",
+    "mobx/missing-make-observable": "error",
+    "mobx/missing-observer": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "mobx/missing-observer": "error"
+      }
+    }
+  ]
+}
