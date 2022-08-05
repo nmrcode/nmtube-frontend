@@ -9,7 +9,6 @@ class AuthStore {
   }
 
   isAuth: boolean = false;
-  errors: any = "";
 
   async login(email: string, password: string) {
     try {
@@ -17,7 +16,17 @@ class AuthStore {
       this.isAuth = true;
     } catch (error) {
       const err = error as AxiosError;
-      this.errors = err.response?.data;
+    }
+  }
+
+  async register(email: string, password: string) {
+    try {
+      const res = await AuthService.register(email, password);
+      this.isAuth = true;
+    } catch (error) {
+      const err = error as AxiosError;
     }
   }
 }
+
+export const authStore = new AuthStore();

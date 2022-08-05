@@ -1,21 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
   env: {
     BACKEND_URL: process.env.BACKEND_URL,
   },
   async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "http://localhost:4444/api/:path*",
-      },
-      {
-        source: "/uploads/:path*",
-        destination: "http://localhost:4444/uploads/:path*",
-      },
-    ];
+    return process.env.NODE_ENV === "development"
+      ? [
+          {
+            source: "/:path*",
+            destination: "http://localhost:4444/:path*",
+          },
+        ]
+      : [];
   },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(

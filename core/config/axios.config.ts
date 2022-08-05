@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const $axios = axios.create({
-  url: process.env.REACT_URL_APP,
+  url: process.env.BACKEND_URL,
   headers: {
     "Content-type": "application/json",
   },
